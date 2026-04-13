@@ -68,3 +68,187 @@ input {
   margin: 10px auto;
   box-shadow: 1px 3px 20px 0px rgba(0, 0, 0, 0.3)
 }
+
+.ToDo-Filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.Filter-Button {
+  padding: 6px 16px;
+  border: 2px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.Filter-Button-red {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+.Filter-Button-red:hover,
+.Filter-Button-red.active {
+  background: #ff4444;
+  color: white;
+}
+
+.Filter-Button-orange {
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+.Filter-Button-orange:hover,
+.Filter-Button-orange.active {
+  background: #ff9800;
+  color: white;
+}
+
+.Filter-Button-yellow {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.Filter-Button-yellow:hover,
+.Filter-Button-yellow.active {
+  background: #ffc107;
+  color: white;
+}
+
+.Filter-Button-green {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+.Filter-Button-green:hover,
+.Filter-Button-green.active {
+  background: #4caf50;
+  color: white;
+}
+
+.Filter-Button-blue {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.Filter-Button-blue:hover,
+.Filter-Button-blue.active {
+  background: #2196f3;
+  color: white;
+}
+
+.Filter-Button-Clear {
+  border-color: #999;
+  color: #999;
+}
+
+.Filter-Button-Clear:hover {
+  background: #999;
+  color: white;
+}
+
+.ToDoItem-Wrapper {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.ToDoItem-Wrapper.dragging {
+  opacity: 0.5;
+}
+
+.ToDoItem-Wrapper.drag-over::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2196f3;
+  z-index: 10;
+  border-radius: 2px;
+}
+
+.ToDoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ToDoItem.completed .ToDoItem-Text {
+  text-decoration: line-through;
+  color: #999;
+  background-color: #f0f0f0;
+}
+
+.ToDoItem-Text {
+  width: 90%;
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 1px lightgrey;
+  padding: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ToDoItem-Text:hover {
+  background-color: #f9f9f9;
+}
+
+.ToDoItem-Delete {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background: #ff7373;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #c70202;
+  color: white;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.ToDoItem-Delete:hover {
+  box-shadow: none;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.ToDoItem-ColorDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ToDoItem-ColorDot:hover {
+  transform: scale(1.2);
+}
+
+.ToDoItem-ColorDot-red {
+  background-color: #ff4444;
+}
+
+.ToDoItem-ColorDot-orange {
+  background-color: #ff9800;
+}
+
+.ToDoItem-ColorDot-yellow {
+  background-color: #ffc107;
+}
+
+.ToDoItem-ColorDot-green {
+  background-color: #4caf50;
+}
+
+.ToDoItem-ColorDot-blue {
+  background-color: #2196f3;
+}

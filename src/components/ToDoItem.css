@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.ToDoItem.completed .ToDoItem-Text {
+    text-decoration: line-through;
+    color: #999;
+    background-color: #f0f0f0;
+}
+
 .ToDoItem-Text {
     width: 90%;
     background-color: white;
@@ -11,11 +17,16 @@
     box-shadow: 1px 1px 1px lightgrey;
     padding: 12px;
     margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ToDoItem-Text:hover {
+    background-color: #f9f9f9;
 }
 
 .ToDoItem-Delete {
     width: 35px;
-    /*padding: 5px;*/
     height: 35px;
     cursor: pointer;
     background: #ff7373;
@@ -30,4 +41,38 @@
     box-shadow: none;
     margin-top: 1px;
     margin-left: 1px;
+}
+
+.ToDoItem-ColorDot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.ToDoItem-ColorDot:hover {
+    transform: scale(1.2);
+}
+
+.ToDoItem-ColorDot-red {
+    background-color: #ff4444;
+}
+
+.ToDoItem-ColorDot-orange {
+    background-color: #ff9800;
+}
+
+.ToDoItem-ColorDot-yellow {
+    background-color: #ffc107;
+}
+
+.ToDoItem-ColorDot-green {
+    background-color: #4caf50;
+}
+
+.ToDoItem-ColorDot-blue {
+    background-color: #2196f3;
 }
